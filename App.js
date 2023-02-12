@@ -1,11 +1,14 @@
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+  const [outputText, setOutputText] = useState('Dragan');
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>{outputText}</Text>
       <StatusBar style="auto" />
+      <Button title="Full name" onPress={() => setOutputText('Dragan Nelu')} />
     </View>
   );
 }
